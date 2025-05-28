@@ -98,7 +98,7 @@ class Grapher(object):
         rels = [self.relation2id[x[1]] for x in quads]
         objs = [self.entity2id[x[2]] for x in quads]
         tss = [self.ts2id[x[3]] for x in quads]
-        # ICEWS14
+        # WIKI
         # subs = [int(x[0]) for x in quads]
         # rels = [int(x[1]) for x in quads]
         # objs = [int(x[2]) for x in quads]
