@@ -165,27 +165,6 @@ def match_body_relations(rule, edges, test_query_sub):
                 except KeyError:
                     walk_edges.append([])
                     break
-        # if 0 not in [len(x) for x in walk_edges]:
-        #     var_constraints = rule["var_constraints"]
-        #     if var_constraints:
-        #         valid_walk_edges = []
-        #         for we in walk_edges:
-        #             if isinstance(we, np.ndarray) and we.size > 0:
-        #                 df = pd.DataFrame(
-        #                     we,
-        #                     columns=["entity_" + str(i) for i in range(len(we[0]) - 1)] + ["timestamp"],
-        #                 )
-        #                 for const in var_constraints:
-        #                     for j in range(len(const) - 1):
-        #                         df = df[
-        #                             df["entity_" + str(const[j])]
-        #                             == df["entity_" + str(const[j + 1])]
-        #                             ]
-        #                 if not df.empty:
-        #                     valid_walk_edges.append(df.values)
-        #             else:
-        #                 valid_walk_edges.append(we)
-        #         walk_edges = valid_walk_edges
     except KeyError:
         walk_edges = [[]]
 
