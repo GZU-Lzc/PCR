@@ -15,13 +15,13 @@ from score_functions import score_12
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--dataset", "-d", default="icews14", type=str)
+parser.add_argument("--dataset", "-d", default="", type=str)
 parser.add_argument("--test_data", default="test", type=str)
-parser.add_argument("--rules", "-r", default="24052512051_r[1,2,3]_n200_exp_s12_rules.json", type=str)
-parser.add_argument("--rule_lengths", "-l", default=[1,2,3], type=int, nargs="+")
-parser.add_argument("--window", "-w", default=0, type=int)
+parser.add_argument("--rules", "-r", default="", type=str)
+parser.add_argument("--rule_lengths", "-l", default="1", type=int, nargs="+")
+parser.add_argument("--window", "-w", default=-1, type=int)
 parser.add_argument("--top_k", default=20, type=int)
-parser.add_argument("--num_processes", "-p", default=128, type=int)
+parser.add_argument("--num_processes", "-p", default=1, type=int)
 parsed = vars(parser.parse_args())
 
 dataset = parsed["dataset"]
@@ -131,17 +131,6 @@ def apply_rules(i, sub, obj, num_queries):
 
             if cands_dict[0]:
                 for s in range(len(args)):
-                    # Calculate noisy-or scores
-                    # scores = []
-                    # for values in cands_dict[s].values():
-                    #     # 将得分列表转换为 mpmath 的浮点数类型
-                    #     values_mp = [mpmath.mpf(float(score)) for score in values]
-                    #     # 计算 1 - score 的乘积
-                    #     product = mpmath.fprod([mpmath.mpf(1) - score for score in values_mp])
-                    #     # 计算 noisy - OR 结果
-                    #     noisy_or_score = mpmath.mpf(1) - product
-                    #     scores.append(noisy_or_score)
-
                     scores = list(
                         map(
                             lambda x: 1 - np.prod(1 - np.array(x)),
