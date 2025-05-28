@@ -10,12 +10,12 @@ from rule_learning import Rule_Learner, rules_statistics
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--dataset", "-d", default="icews14", type=str)
-parser.add_argument("--rule_lengths", "-l", default=[1,2,3], type=int, nargs="+")
-parser.add_argument("--num_walks", "-n", default="175", type=int)
+parser.add_argument("--dataset", "-d", default="", type=str)
+parser.add_argument("--rule_lengths", "-l", default="1", type=int, nargs="+")
+parser.add_argument("--num_walks", "-n", default="100", type=int)
 parser.add_argument("--transition_distr", default="exp", type=str)
-parser.add_argument("--num_processes", "-p", default=16, type=int)
-parser.add_argument("--seed", "-s", default=12, type=int)
+parser.add_argument("--num_processes", "-p", default=1, type=int)
+parser.add_argument("--seed", "-s", default=None, type=int)
 parsed = vars(parser.parse_args())
 
 dataset = parsed["dataset"]
