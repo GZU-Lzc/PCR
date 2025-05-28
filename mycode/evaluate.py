@@ -8,9 +8,9 @@ from baseline import baseline_candidates, calculate_obj_distribution
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--dataset", "-d", default="icews14", type=str)
+parser.add_argument("--dataset", "-d", default="", type=str)
 parser.add_argument("--test_data", default="test", type=str)
-parser.add_argument("--candidates", "-c", default="280525020939_r[1,2,3]_n175_exp_s12_cands_r[1,2,3]_w0_score_12[0.1,0.5].json", type=str)
+parser.add_argument("--candidates", "-c", default="", type=str)
 parsed = vars(parser.parse_args())
 
 
