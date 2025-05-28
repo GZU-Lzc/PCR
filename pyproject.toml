@@ -2,14 +2,13 @@
 name = "logical-tkgs"
 version = "0.1.0"
 description = ""
-authors = ["Yushan Liu <yushan.liu@siemens.com>"]
+authors = ["Zichen Liu <gs.zcliu23@gzu.edu.cn>"]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
 numpy = "^1.21.4"
 joblib = "^1.2.0"
 pandas = "^1.3.4"
-notebook = "^6.4.12"
 
 [tool.poetry.dev-dependencies]
 
