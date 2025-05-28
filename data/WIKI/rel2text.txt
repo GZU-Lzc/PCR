@@ -1,0 +1,24 @@
+P1376: capital of 0
+P512: academic degree 4
+P579: IMA status and/or rank 3
+P150: contains administrative territorial entity 18
+P190: twinned administrative body 5
+P551: residence 19
+P131: located in the administrative territorial entity 1
+P793: significant event 21
+P1435: heritage designation 13
+P39: position held 14
+P17: country 6
+P54: member of sports team 22
+P31: instance of 15
+P6: head of government 7
+P1411: nominated for 20
+P2962: Goodreads author ID 2
+P463: member of 9
+P1346: winner 16
+P108: employer 10
+P69: educated at 23
+P166: award received 17
+P102: member of political party 11
+P27: country of citizenship 12
+P26: spouse 8
