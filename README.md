@@ -9,8 +9,6 @@ The dependencies required to run the code are specified in [`pyproject.toml`](ht
 
 The commands for running TLogic and recreating the results from the paper can be found in [`run.txt`](https://github.com/GZU-Lzc/PCR/blob/main/mycode/run.txt).
 
-[`demo.ipynb`](https://github.com/GZU-Lzc/PCR/blob/main/mycode/demo.ipynb) contains a demonstration of the components rule learning and rule application.
-
 
 <h3> Datasets </h3>
 
